@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore relationship compatibility with AstroVeda's Vedic and modern astrology-inspired experience.">
+  <title>Compatibility | AstroVeda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div class="announcement">
+    <p>Every connection has a story. Discover yours among the stars.</p>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="AstroVeda home">
+        <span class="brand-symbol">✧</span>
+        <span>AstroVeda</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="horoscope.html" class="nav-link">Horoscope</a>
+        <a href="birth-chart.html" class="nav-link">Birth Chart</a>
+        <a href="compatibility.html" class="nav-link active" aria-current="page">Compatibility</a>
+        <a href="astrologers.html" class="nav-link">Astrologers</a>
+        <a href="ai-astrology.html" class="nav-link">AI Guide</a>
+        <a href="login.html" class="nav-login">Log in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="compat-hero">
+      <div class="compat-hero-content">
+        <span class="eyebrow">TWO SOULS · ONE CONNECTION</span>
+        <h1>Written in the stars.<br><em>Explored together.</em></h1>
+        <p>
+          Discover how two cosmic profiles might complement one another.
+          Explore relationship themes through the lens of astrology.
+        </p>
+
+        <a href="#compatibility-form" class="button compat-hero-button">
+          Explore your connection <span>↓</span>
+        </a>
+
+        <div class="compat-hero-footnote">
+          ✧ A tool for reflection, not a verdict on your relationship.
+        </div>
+      </div>
+
+      <div class="compat-cosmic-art" aria-hidden="true">
+        <div class="compat-ring ring-outer"></div>
+        <div class="compat-ring ring-middle"></div>
+        <div class="compat-ring ring-inner"></div>
+
+        <div class="compat-person person-one">
+          <span>☾</span>
+        </div>
+
+        <div class="compat-person person-two">
+          <span>☼</span>
+        </div>
+
+        <div class="compat-connection">♡</div>
+        <span class="compat-art-star art-star-one">✦</span>
+        <span class="compat-art-star art-star-two">✧</span>
+        <span class="compat-art-star art-star-three">✦</span>
+        <span class="compat-art-star art-star-four">✧</span>
+
+        <div class="compat-art-caption">THE ART OF CONNECTION</div>
+      </div>
+    </section>
+
+    <!-- Compatibility form -->
+    <section class="section-wrap compat-workspace" id="compatibility-form">
+      <div class="compat-section-heading">
+        <span class="eyebrow">YOUR COSMIC CONNECTION</span>
+        <h2>Bring your two worlds together</h2>
+        <p>
+          Add both birth profiles to create a sample compatibility reading.
+          You can leave names blank if you prefer.
+        </p>
+      </div>
+
+      <form id="compatibilityForm" class="compat-form">
+        <div class="compat-people-grid">
+
+          <!-- Person One -->
+          <section class="compat-person-card">
+            <div class="compat-card-heading">
+              <div class="compat-avatar avatar-one">☾</div>
+              <div>
+                <span class="eyebrow">PROFILE ONE</span>
+                <h3>First person</h3>
+              </div>
+            </div>
+
+            <div class="compat-field">
+              <label for="personOneName">Name <span>(optional)</span></label>
+              <input
+                type="text"
+                id="personOneName"
+                name="personOneName"
+                placeholder="Enter name"
+                maxlength="80"
+                autocomplete="off"
+              >
+            </div>
+
+            <div class="compat-field">
+              <label for="personOneDate">Date of birth *</label>
+              <input type="date" id="personOneDate" name="personOneDate" required>
+            </div>
+
+            <div class="compat-field">
+              <label for="personOneTime">Time of birth</label>
+              <input type="time" id="personOneTime" name="personOneTime">
+              <small>Optional for this demo.</small>
+            </div>
+
+            <div class="compat-field">
+              <label for="personOnePlace">Birthplace</label>
+              <input
+                type="text"
+                id="personOnePlace"
+                name="personOnePlace"
+                placeholder="City, country"
+                maxlength="120"
+                autocomplete="off"
+              >
+            </div>
+          </section>
+
+          <!-- Connection symbol -->
+          <div class="compat-plus" aria-hidden="true">
+            <span>♡</span>
+            <small>TOGETHER</small>
+          </div>
+
+          <!-- Person Two -->
+          <section class="compat-person-card">
+            <div class="compat-card-heading">
+              <div class="compat-avatar avatar-two">☼</div>
+              <div>
+                <span class="eyebrow">PROFILE TWO</span>
+                <h3>Second person</h3>
+              </div>
+            </div>
+
+            <div class="compat-field">
+              <label for="personTwoName">Name <span>(optional)</span></label>
+              <input
+                type="text"
+                id="personTwoName"
+                name="personTwoName"
+                placeholder="Enter name"
+                maxlength="80"
+                autocomplete="off"
+              >
+            </div>
+
+            <div class="compat-field">
+              <label for="personTwoDate">Date of birth *</label>
+              <input type="date" id="personTwoDate" name="personTwoDate" required>
+            </div>
+
+            <div class="compat-field">
+              <label for="personTwoTime">Time of birth</label>
+              <input type="time" id="personTwoTime" name="personTwoTime">
+              <small>Optional for this demo.</small>
+            </div>
+
+            <div class="compat-field">
+              <label for="personTwoPlace">Birthplace</label>
+              <input
+                type="text"
+                id="personTwoPlace"
+                name="personTwoPlace"
+                placeholder="City, country"
+                maxlength="120"
+                autocomplete="off"
+              >
+            </div>
+          </section>
+        </div>
+
+        <div class="compat-options">
+          <div class="compat-field compat-system-field">
+            <label for="compatSystem">Astrology system</label>
+            <select id="compatSystem" name="compatSystem">
+              <option value="vedic">Vedic astrology</option>
+              <option value="western">Western astrology</option>
+            </select>
+          </div>
+
+          <div class="compat-field compat-type-field">
+            <label for="relationshipType">Connection type</label>
+            <select id="relationshipType" name="relationshipType">
+              <option value="romantic">Romantic relationship</option>
+              <option value="friendship">Friendship</option>
+              <option value="family">Family connection</option>
+              <option value="professional">Professional partnership</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="compat-submit-area">
+          <button type="submit" class="button compat-submit">
+            Explore compatibility <span>↗</span>
+          </button>
+          <p>For reflection and entertainment. No relationship outcome is predetermined.</p>
+          <p id="compatFormMessage" class="compat-form-message" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <!-- Demo result -->
+      <section id="compatResult" class="compat-result" aria-live="polite" hidden>
+        <div class="compat-result-top">
+          <span class="eyebrow">YOUR CONNECTION PREVIEW</span>
+          <span class="compat-demo-tag">DEMO READING</span>
+        </div>
+
+        <h2 id="compatResultTitle">A connection worth exploring</h2>
+        <p id="compatResultIntro" class="compat-result-intro"></p>
+
+        <div class="compat-result-grid">
+          <article class="compat-insight">
+            <span class="insight-icon">✧</span>
+            <h3>Communication</h3>
+            <p id="communicationText"></p>
+          </article>
+
+          <article class="compat-insight">
+            <span class="insight-icon">♡</span>
+            <h3>Emotional connection</h3>
+            <p id="emotionalText"></p>
+          </article>
+
+          <article class="compat-insight">
+            <span class="insight-icon">☼</span>
+            <h3>Growing together</h3>
+            <p id="growthText"></p>
+          </article>
+        </div>
+
+        <div class="compat-result-note">
+          <span>✦</span>
+          <div>
+            <strong>A note about this reading</strong>
+            <p id="compatDisclaimer">
+              This is a general reflection generated by the website demo.
+              It is not a calculated astrological compatibility score.
+            </p>
+          </div>
+        </div>
+
+        <button type="button" id="editCompatDetails" class="button compat-edit-button">
+          Edit birth details
+        </button>
+      </section>
+    </section>
+
+    <!-- Explanation section -->
+    <section class="compat-meaning-section">
+      <div class="section-wrap">
+        <div class="compat-section-heading">
+          <span class="eyebrow">BEYOND THE STARS</span>
+          <h2>What shapes a meaningful connection?</h2>
+          <p>
+            Astrology offers traditional symbolic interpretations. In real
+            relationships, trust, communication, shared values, and respect matter.
+          </p>
+        </div>
+
+        <div class="compat-meaning-grid">
+          <article class="compat-meaning-card">
+            <span>☾</span>
+            <h3>Emotional understanding</h3>
+            <p>Make room for each person's feelings, needs, and different ways of expressing care.</p>
+          </article>
+
+          <article class="compat-meaning-card">
+            <span>✧</span>
+            <h3>Communication styles</h3>
+            <p>Listen with curiosity, ask clear questions, and work through misunderstandings together.</p>
+          </article>
+
+          <article class="compat-meaning-card">
+            <span>♡</span>
+            <h3>Shared growth</h3>
+            <p>Build a connection where both people feel respected, supported, and free to grow.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-symbol">✧</span>
+          <span>AstroVeda</span>
+        </a>
+        <p>Ancient wisdom. Modern perspective. A little more clarity for your journey.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="horoscope.html">Daily Horoscope</a>
+        <a href="birth-chart.html">Birth Chart</a>
+        <a href="compatibility.html">Compatibility</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Discover</h4>
+        <a href="astrologers.html">Our Astrologers</a>
+        <a href="ai-astrology.html">AI Astrology Guide</a>
+        <a href="about.html">About AstroVeda</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Your Account

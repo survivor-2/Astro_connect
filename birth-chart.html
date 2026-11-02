@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore your Vedic birth chart with AstroVeda. Enter your birth details to preview your cosmic profile.">
+  <title>Birth Chart | AstroVeda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div class="announcement">
+    <p>Your journey to self-discovery begins with the stars.</p>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="AstroVeda home">
+        <span class="brand-symbol">✧</span>
+        <span>AstroVeda</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="horoscope.html" class="nav-link">Horoscope</a>
+        <a href="birth-chart.html" class="nav-link active" aria-current="page">Birth Chart</a>
+        <a href="compatibility.html" class="nav-link">Compatibility</a>
+        <a href="astrologers.html" class="nav-link">Astrologers</a>
+        <a href="ai-astrology.html" class="nav-link">AI Guide</a>
+        <a href="login.html" class="nav-login">Log in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="chart-hero">
+      <div class="chart-hero-content">
+        <span class="eyebrow">YOUR COSMIC BLUEPRINT</span>
+        <h1>Discover the story<br>written in your <em>stars.</em></h1>
+        <p>
+          Your birth chart is a celestial snapshot of the sky at the moment
+          you were born. Enter your details to explore your cosmic profile.
+        </p>
+        <div class="chart-hero-note">
+          <span>✧</span> Rooted in Vedic astrology, inspired by self-discovery
+        </div>
+      </div>
+
+      <div class="chart-orbit" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+        <div class="orbit-center">✧</div>
+        <span class="orbit-star star-one">✦</span>
+        <span class="orbit-star star-two">✧</span>
+        <span class="orbit-star star-three">✦</span>
+        <span class="orbit-star star-four">✧</span>
+        <span class="orbit-label">THE COSMIC MAP</span>
+      </div>
+    </section>
+
+    <section class="chart-workspace section-wrap">
+      <div class="chart-intro">
+        <span class="eyebrow">BEGIN YOUR READING</span>
+        <h2>Your birth details</h2>
+        <p>
+          Small details matter. Enter your birth date, time, and location
+          to create your birth-chart preview.
+        </p>
+      </div>
+
+      <div class="chart-layout">
+        <form id="birthChartForm" class="chart-form">
+          <div class="form-heading">
+            <span class="form-icon">✧</span>
+            <div>
+              <h3>Tell us when you arrived</h3>
+              <p>All fields marked with * are required.</p>
+            </div>
+          </div>
+
+          <div class="chart-field">
+            <label for="fullName">Your name <span>(optional)</span></label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your name" autocomplete="name">
+          </div>
+
+          <div class="chart-field">
+            <label for="birthDate">Date of birth *</label>
+            <input type="date" id="birthDate" name="birthDate" required>
+          </div>
+
+          <div class="chart-field">
+            <label for="birthTime">Time of birth *</label>
+            <input type="time" id="birthTime" name="birthTime" required>
+            <small>Use the local time recorded at your birth, if known.</small>
+          </div>
+
+          <div class="chart-field">
+            <label for="birthPlace">Place of birth *</label>
+            <input
+              type="text"
+              id="birthPlace"
+              name="birthPlace"
+              placeholder="e.g. Jaipur, Rajasthan, India"
+              autocomplete="off"
+              required
+            >
+            <small>Enter the city and country for your birthplace.</small>
+          </div>
+
+          <div class="chart-field">
+            <label for="astrologySystem">Astrology system</label>
+            <select id="astrologySystem" name="astrologySystem">
+              <option value="vedic">Vedic astrology</option>
+              <option value="western">Western astrology</option>
+            </select>
+          </div>
+
+          <button type="submit" class="button chart-submit">
+            Reveal my chart <span>↗</span>
+          </button>
+
+          <p class="chart-privacy">
+            <span>✧</span> Your details are used here to generate a demo preview.
+          </p>
+
+          <p id="chartFormMessage" class="chart-form-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="chart-preview-panel">
+          <div class="preview-topline">
+            <span class="eyebrow">YOUR COSMIC PROFILE</span>
+            <span class="preview-status"><span></span> PREVIEW</span>
+          </div>
+
+          <div class="kundli-frame">
+            <div class="kundli-heading">
+              <span>✧</span>
+              <div>
+                <h3 id="previewTitle">Your Birth Chart</h3>
+                <p id="previewSubtitle">Your personal cosmic snapshot</p>
+              </div>
+              <span>✧</span>
+            </div>
+
+            <div class="kundli-diagram" aria-label="Illustrative twelve-house birth chart">
+              <svg viewBox="0 0 320 320" role="img" aria-label="Decorative Vedic-style chart divided into twelve sections">
+                <rect x="10" y="10" width="300" height="300" rx="2" class="kundli-outer"/>
+                <path d="M10 10 L310 310 M310 10 L10 310" class="kundli-line"/>
+                <path d="M160 10 L310 160 L160 310 L10 160 Z" class="kundli-line"/>
+                <path d="M10 85 L85 10 M235 10 L310 85 M310 235 L235 310 M85 310 L10 235" class="kundli-line kundli-line-soft"/>
+                <path d="M85 10 L160 85 L235 10 M10 85 L85 160 L10 235 M310 85 L235 160 L310 235 M85 310 L160 235 L235 310" class="kundli-line kundli-line-soft"/>
+                <text x="160" y="69" class="kundli-house">1</text>
+                <text x="236" y="42" class="kundli-house">2</text>
+                <text x="273" y="104" class="kundli-house">3</text>
+                <text x="254" y="168" class="kundli-house">4</text>
+                <text x="273" y="232" class="kundli-house">5</text>
+                <text x="236" y="281" class="kundli-house">6</text>
+                <text x="160" y="252" class="kundli-house">7</text>
+                <text x="84" y="281" class="kundli-house">8</text>
+                <text x="47" y="232" class="kundli-house">9</text>
+                <text x="66" y="168" class="kundli-house">10</text>
+                <text x="47" y="104" class="kundli-house">11</text>
+                <text x="84" y="42" class="kundli-house">12</text>
+                <text x="160" y="151" class="kundli-center">ॐ</text>
+                <text x="160" y="175" class="kundli-center-small">COSMIC MAP</text>
+              </svg>
+            </div>
+
+            <p class="kundli-caption">A symbolic chart illustration</p>
+          </div>
+
+          <div class="preview-details">
+            <div class="preview-detail">
+              <span>NAME</span>
+              <strong id="resultName">Awaiting details</strong>
+            </div>
+            <div class="preview-detail">
+              <span>BIRTH DATE</span>
+              <strong id="resultDate">Not entered</strong>
+            </div>
+            <div class="preview-detail">
+              <span>BIRTH TIME</span>
+              <strong id="resultTime">Not entered</strong>
+            </div>
+            <div class="preview-detail">
+              <span>BIRTHPLACE</span>
+              <strong id="resultPlace">Not entered</strong>
+            </div>
+          </div>
+
+          <div id="chartResult" class="chart-result" hidden>
+            <span class="eyebrow">YOUR NEXT STEP</span>
+            <h3>Details received ✧</h3>
+            <p id="resultDescription"></p>
+            <p class="demo-disclaimer">
+              This is a visual demo only. Planetary placements, houses, ascendant,
+              and interpretations have not been calculated.
+            </p>
+          </div>
+
+          <div class="preview-bottom-note">
+            <span>✦</span>
+            <p>The stars may offer a perspective; your choices shape your journey.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chart-meaning-section">
+      <div class="section-wrap">
+        <div class="chart-meaning-heading">
+          <span class="eyebrow">UNDERSTAND YOUR BLUEPRINT</span>
+          <h2>What does your birth chart reveal?</h2>
+          <p>
+            In astrology, the birth chart is used as a symbolic framework
+            for exploring personality, relationships, and life themes.
+          </p>
+        </div>
+
+        <div class="chart-meaning-grid">
+          <article class="meaning-card">
+            <span class="meaning-symbol">☉</span>
+            <h3>Sun sign</h3>
+            <p>Often associated with identity, vitality, and your sense of purpose.</p>
+          </article>
+
+          <article class="meaning-card">
+            <span class="meaning-symbol">☾</span>
+            <h3>Moon sign</h3>
+            <p>Traditionally connected with emotions, instincts, and inner life.</p>
+          </article>
+
+          <article class="meaning-card">
+            <span class="meaning-symbol">↗</span>
+            <h3>Ascendant</h3>
+            <p>Linked in astrology with first impressions and your approach to the world.</p>
+          </article>
+        </div>
+
+        <p class="astrology-note">
+          Astrology is a cultural and spiritual practice, not a scientifically
+          established way to predict personality or future events.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-symbol">✧</span>
+          <span>AstroVeda</span>
+        </a>
+        <p>Ancient wisdom. Modern perspective. A little more clarity for your journey.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="horoscope.html">Daily Horoscope</a>
+        <a href="birth-chart.html">Birth Chart</a>
+        <a href="compatibility.html">Compatibility</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Discover</h4>
+        <a href="astrologers.html">Our Astrologers</a>
+        <a href="ai-astrology.html">AI Astrology Guide</a>
+        <a href="about.html">About AstroVeda</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Your Account</a>
+        <a href="signup.html">Create Account</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> AstroVeda. For reflection and entertainment.</p>
+      <p>Made for curious minds <span>✧</span></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="birth-chart.js"></script>
+</body>
+</html>
+```

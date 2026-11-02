@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090D1B">
+  <meta name="description" content="Explore zodiac profiles and daily, weekly and monthly horoscope insights on AstroVeda.">
+
+  <title>Horoscope | AstroVeda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
+  <script src="main.js" defer></script>
+  <script src="horoscope.js" defer></script>
+</head>
+
+<body>
+  <div class="announcement">
+    <span class="announcement-star">✦</span>
+    Ancient wisdom. A more personal perspective.
+    <a href="birth-chart.html">Discover your chart ↗</a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">✳</span>
+      <span>Astro<span class="brand-gold">Veda</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation" aria-expanded="false"
+      aria-controls="primaryNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="primary-nav" id="primaryNav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link active" href="horoscope.html">Horoscope</a>
+      <a class="nav-link" href="birth-chart.html">Birth Chart</a>
+      <a class="nav-link" href="compatibility.html">Compatibility</a>
+      <a class="nav-link" href="astrologers.html">Astrologers</a>
+      <a class="nav-link" href="ai-astrology.html">AI Guide</a>
+      <a class="nav-login" href="login.html">Sign in <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOROSCOPE HERO -->
+    <section class="horoscope-hero">
+      <div class="horoscope-hero-inner">
+        <div class="horoscope-hero-copy">
+          <span class="section-kicker">YOUR COSMIC FORECAST</span>
+          <h1>Read the stars.<br><em>Reflect on your path.</em></h1>
+          <p>
+            Explore your zodiac sign through a modern lens,
+            inspired by the timeless symbolism of astrology.
+          </p>
+
+          <div class="horoscope-hero-actions">
+            <a href="#zodiacPicker" class="button button-primary">
+              Choose your sign <span>↓</span>
+            </a>
+            <a href="birth-chart.html" class="button button-secondary">
+              Explore my birth chart
+            </a>
+          </div>
+        </div>
+
+        <div class="horoscope-hero-art" aria-hidden="true">
+          <div class="horoscope-big-orbit"></div>
+          <div class="horoscope-small-orbit"></div>
+          <div class="horoscope-moon">☾</div>
+          <div class="horoscope-hero-star star-a">✦</div>
+          <div class="horoscope-hero-star star-b">✧</div>
+          <div class="horoscope-hero-star star-c">✦</div>
+          <div class="horoscope-hero-label">
+            <span>✳</span>
+            <small>YOUR SIGN<br>YOUR STORY</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZODIAC SELECTOR -->
+    <section class="horoscope-picker section-wrap" id="zodiacPicker">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">THE TWELVE ZODIAC SIGNS</span>
+          <h2>Choose your <em>sign.</em></h2>
+        </div>
+        <p class="picker-note">
+          Select a sign to explore its horoscope.
+        </p>
+      </div>
+
+      <div class="horoscope-sign-grid" id="horoscopeSignGrid">
+        <button class="horoscope-sign selected" data-sign="aries" aria-pressed="true">
+          <span>♈</span><strong>Aries</strong><small>Mar 21 – Apr 19</small>
+        </button>
+        <button class="horoscope-sign" data-sign="taurus" aria-pressed="false">
+          <span>♉</span><strong>Taurus</strong><small>Apr 20 – May 20</small>
+        </button>
+        <button class="horoscope-sign" data-sign="gemini" aria-pressed="false">
+          <span>♊</span><strong>Gemini</strong><small>May 21 – Jun 20</small>
+        </button>
+        <button class="horoscope-sign" data-sign="cancer" aria-pressed="false">
+          <span>♋</span><strong>Cancer</strong><small>Jun 21 – Jul 22</small>
+        </button>
+        <button class="horoscope-sign" data-sign="leo" aria-pressed="false">
+          <span>♌</span><strong>Leo</strong><small>Jul 23 – Aug 22</small>
+        </button>
+        <button class="horoscope-sign" data-sign="virgo" aria-pressed="false">
+          <span>♍</span><strong>Virgo</strong><small>Aug 23 – Sep 22</small>
+        </button>
+        <button class="horoscope-sign" data-sign="libra" aria-pressed="false">
+          <span>♎</span><strong>Libra</strong><small>Sep 23 – Oct 22</small>
+        </button>
+        <button class="horoscope-sign" data-sign="scorpio" aria-pressed="false">
+          <span>♏</span><strong>Scorpio</strong><small>Oct 23 – Nov 21</small>
+        </button>
+        <button class="horoscope-sign" data-sign="sagittarius" aria-pressed="false">
+          <span>♐</span><strong>Sagittarius</strong><small>Nov 22 – Dec 21</small>
+        </button>
+        <button class="horoscope-sign" data-sign="capricorn" aria-pressed="false">
+          <span>♑</span><strong>Capricorn</strong><small>Dec 22 – Jan 19</small>
+        </button>
+        <button class="horoscope-sign" data-sign="aquarius" aria-pressed="false">
+          <span>♒</span><strong>Aquarius</strong><small>Jan 20 – Feb 18</small>
+        </button>
+        <button class="horoscope-sign" data-sign="pisces" aria-pressed="false">
+          <span>♓</span><strong>Pisces</strong><small>Feb 19 – Mar 20</small>
+        </button>
+      </div>
+    </section>
+
+    <!-- SELECTED SIGN FORECAST -->
+    <section class="forecast-section section-wrap" id="forecast">
+      <div class="forecast-topline">
+        <div>
+          <span class="section-kicker">YOUR SELECTED ZODIAC</span>
+          <div class="forecast-title-row">
+            <span class="forecast-symbol" id="forecastSymbol">♈</span>
+            <div>
+              <h2 id="forecastSign">Aries</h2>
+              <p id="forecastDates">March 21 – April 19</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="forecast-date">
+          <span class="section-kicker">YOUR READING</span>
+          <strong id="forecastDate">Astrology insights</strong>
+        </div>
+      </div>
+
+      <div class="forecast-tabs" role="tablist" aria-label="Horoscope period">
+        <button class="forecast-tab active" id="dailyTab"
+          role="tab" aria-selected="true" data-period="daily">Daily</button>
+        <button class="forecast-tab" id="weeklyTab"
+          role="tab" aria-selected="false" data-period="weekly">Weekly</button>
+        <button class="forecast-tab" id="monthlyTab"
+          role="tab" aria-selected="false" data-period="monthly">Monthly</button>
+      </div>
+
+      <div class="forecast-main-card">
+        <div class="forecast-main-copy">
+          <span class="forecast-label">✦ YOUR COSMIC REFLECTION</span>
+          <h3 id="forecastHeadline">Make room for a fresh start.</h3>
+          <p id="forecastDescription">
+            Consider where a little initiative could help you move forward.
+            Give yourself time to think clearly before making important choices.
+          </p>
+          <div class="forecast-meta">
+            <span>✧ Self-reflection</span>
+            <span>☾ Personal growth</span>
+          </div>
+        </div>
+
+        <div class="forecast-moon-art" aria-hidden="true">
+          <div class="forecast-moon-ring"></div>
+          <div class="forecast-moon-symbol">☾</div>
+          <span class="moon-star moon-star-one">✦</span>
+          <span class="moon-star moon-star-two">✧</span>
+          <span class="moon-star moon-star-three">✦</span>
+        </div>
+      </div>
+
+      <div class="forecast-insights">
+        <article class="forecast-insight-card">
+          <div class="insight-icon">♡</div>
+          <span class="section-kicker">LOVE & CONNECTIONS</span>
+          <h3>Relationships</h3>
+          <p id="loveInsight">
+            Honest conversations and thoughtful listening can help
+            strengthen your connections.
+          </p>
+        </article>
+
+        <article class="forecast-insight-card">
+          <div class="insight-icon">↗</div>
+          <span class="section-kicker">WORK & AMBITION</span>
+          <h3>Career</h3>
+          <p id="careerInsight">
+            Focus on one meaningful priority rather than trying to
+            complete everything at once.
+          </p>
+        </article>
+
+        <article class="forecast-insight-card">
+          <div class="insight-icon">☼</div>
+          <span class="section-kicker">BALANCE & WELLBEING</span>
+          <h3>Personal wellbeing</h3>
+          <p id="wellbeingInsight">
+            Make time for rest, movement, and the routines that
+            help you feel grounded.
+          </p>
+        </article>
+      </div>
+
+      <p class="forecast-disclaimer">
+        These are illustrative astrology-themed reflections, not
+        calculated planetary forecasts or professional advice.
+      </p>
+    </section>
+
+    <!-- VEDIC + MODERN -->
+    <section class="horoscope-approach">
+      <div class="section-wrap approach-inner">
+        <div>
+          <span class="section-kicker">TWO TRADITIONS, ONE JOURNEY</span>
+          <h2>Go beyond your <em>sun sign.</em></h2>
+          <p>
+            Western astrology often explores the tropical zodiac,
+            while Vedic Jyotish commonly uses the sidereal zodiac.
+            Your Sun sign alone is only one part of a fuller chart.
+          </p>
+        </div>
+
+        <div class="approach-actions">
+          <a href="birth-chart.html" class="button button-primary">
+            Explore my birth chart ↗
+          </a>
+          <a href="compatibility.html" class="text-link">
+            Explore compatibility ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="section-wrap footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="brand-mark">✳</span>
+            <span>Astro<span class="brand-gold">Veda</span></span>
+          </a>
+          <p>Ancient wisdom. Modern perspective.<br>
+            A little more insight into yourself.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <a href="horoscope.html">Horoscope</a>
+          <a href="birth-chart.html">Birth chart</a>
+          <a href="compatibility.html">Compatibility</a>
+          <a href="ai-astrology.html">AI guide</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>AstroVeda</h4>
+          <a href="astrologers.html">Astrologers</a>
+          <a href="booking.html">Appointments</a>
+          <a href="about.html">About us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Your account</h4>
+          <a href="login.html">Sign in</a>
+          <a href="signup.html">Create account</a>
+          <a href="dashboard.html">My dashboard</a>
+        </div>
+      </div>
+
+      <div class="section-wrap footer-bottom">
+        <span>© <span id="currentYear"></span> AstroVeda. All rights reserved.</span>
+        <span>Astrology for reflection and personal exploration.</span>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

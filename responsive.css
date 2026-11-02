@@ -1,0 +1,985 @@
+
+/* TABLETS AND SMALL LAPTOPS */
+
+@media (max-width: 1100px) {
+    .site-header {
+      width: calc(100% - 40px);
+    }
+  
+    .primary-nav {
+      gap: 14px;
+    }
+  
+    .nav-link {
+      font-size: 11px;
+    }
+  
+    .hero {
+      min-height: 500px;
+    }
+  
+    .hero h1 {
+      font-size: clamp(43px, 5.5vw, 62px);
+    }
+  
+    .hero-art {
+      width: 100%;
+    }
+  
+    .floating-note {
+      padding: 9px 10px;
+    }
+  
+    .services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  
+    .service-card {
+      min-height: 235px;
+    }
+  
+    .birth-card {
+      gap: 30px;
+    }
+  }
+  
+  /* MOBILE NAVIGATION AND LAYOUT */
+  
+  @media (max-width: 760px) {
+    .section-wrap {
+      width: calc(100% - 36px);
+    }
+  
+    .announcement {
+      flex-wrap: wrap;
+      gap: 5px;
+      font-size: 10px;
+    }
+  
+    .site-header {
+      width: calc(100% - 36px);
+      min-height: 70px;
+    }
+  
+    .brand {
+      font-size: 23px;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .primary-nav {
+      position: absolute;
+      top: calc(100% + 1px);
+      left: 0;
+      right: 0;
+      display: none;
+      align-items: stretch;
+      flex-direction: column;
+      gap: 0;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #0d1324;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
+    }
+  
+    .primary-nav.open {
+      display: flex;
+    }
+  
+    .primary-nav .nav-link,
+    .primary-nav .nav-login {
+      padding: 13px;
+      font-size: 13px;
+    }
+  
+    .primary-nav .nav-login {
+      margin-top: 7px;
+      justify-content: space-between;
+    }
+  
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding-top: 50px;
+      padding-bottom: 25px;
+    }
+  
+    .hero-copy {
+      text-align: center;
+    }
+  
+    .eyebrow {
+      justify-content: center;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+    }
+  
+    .hero h1 {
+      font-size: clamp(44px, 10vw, 63px);
+      letter-spacing: -1.8px;
+    }
+  
+    .hero-description {
+      max-width: 470px;
+      margin-inline: auto;
+      font-size: 13px;
+    }
+  
+    .hero-actions {
+      justify-content: center;
+    }
+  
+    .hero-proof {
+      justify-content: center;
+      margin-top: 25px;
+      text-align: left;
+    }
+  
+    .hero-art {
+      justify-self: center;
+      width: min(100%, 420px);
+      margin-top: 10px;
+    }
+  
+    .note-top {
+      left: 0;
+    }
+  
+    .note-bottom {
+      right: 0;
+    }
+  
+    .birth-section {
+      padding-top: 20px;
+      padding-bottom: 75px;
+    }
+  
+    .birth-card {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding: 25px 18px;
+    }
+  
+    .birth-intro h2,
+    .section-heading h2,
+    .insight-content h2 {
+      font-size: 31px;
+    }
+  
+    .birth-form {
+      padding: 19px 14px;
+    }
+  
+    .zodiac-section {
+      padding-bottom: 75px;
+    }
+  
+    .zodiac-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 9px;
+    }
+  
+    .zodiac-card {
+      min-height: 125px;
+    }
+  
+    .section-heading {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .text-link {
+      margin-bottom: 0;
+    }
+  
+    .services-section {
+      padding-block: 65px;
+    }
+  
+    .services-grid {
+      gap: 10px;
+    }
+  
+    .service-card {
+      padding: 17px 13px;
+      min-height: 250px;
+    }
+  
+    .service-card h3 {
+      font-size: 17px;
+    }
+  
+    .service-tag {
+      font-size: 7px;
+      letter-spacing: .7px;
+    }
+  
+    .service-card p {
+      font-size: 10px;
+    }
+  
+    .insight-section {
+      padding-block: 65px;
+    }
+  
+    .insight-card {
+      min-height: 320px;
+      padding: 28px 22px;
+    }
+  
+    .insight-orbit {
+      width: 150px;
+      height: 150px;
+      right: -55px;
+      opacity: .5;
+    }
+  
+    .insight-decoration {
+      right: -40px;
+      font-size: 220px;
+    }
+  
+    .insight-content {
+      max-width: 100%;
+    }
+  
+    .insight-content p {
+      max-width: 340px;
+    }
+  
+    .footer-inner {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 35px 20px;
+    }
+  
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+  
+  /* VERY SMALL PHONES */
+  
+  @media (max-width: 380px) {
+    .section-wrap {
+      width: calc(100% - 26px);
+    }
+  
+    .hero h1 {
+      font-size: 41px;
+    }
+  
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .hero-actions .button {
+      width: 100%;
+    }
+  
+    .hero-art {
+      width: 100%;
+    }
+  
+    .floating-note {
+      padding: 7px;
+      gap: 6px;
+    }
+  
+    .floating-note small {
+      font-size: 7px;
+    }
+  
+    .floating-note strong {
+      font-size: 9px;
+    }
+  
+    .zodiac-grid {
+      gap: 7px;
+    }
+  
+    .zodiac-card small {
+      font-size: 8px;
+    }
+  
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .service-card {
+      min-height: 220px;
+    }
+  }
+
+/* HOROSCOPE PAGE RESPONSIVENESS */
+
+@media (max-width: 1000px) {
+    .horoscope-sign-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  
+    .forecast-moon-art {
+      flex-basis: 135px;
+    }
+  
+    .forecast-moon-ring {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .forecast-moon-symbol {
+      font-size: 82px;
+    }
+  
+    .approach-inner {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    .approach-actions {
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 760px) {
+    .horoscope-hero-inner {
+      width: calc(100% - 36px);
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  
+    .horoscope-hero-copy {
+      padding-block: 45px 15px;
+      text-align: center;
+    }
+  
+    .horoscope-hero-copy h1 {
+      font-size: clamp(37px, 8vw, 52px);
+    }
+  
+    .horoscope-hero-copy > p {
+      margin-inline: auto;
+    }
+  
+    .horoscope-hero-actions {
+      justify-content: center;
+    }
+  
+    .horoscope-hero-art {
+      width: min(100%, 285px);
+      margin: 0 auto 35px;
+    }
+  
+    .horoscope-picker {
+      padding-block: 55px 45px;
+    }
+  
+    .horoscope-picker .section-heading {
+      gap: 12px;
+    }
+  
+    .horoscope-sign-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 24px;
+    }
+  
+    .horoscope-sign {
+      min-height: 112px;
+      padding-inline: 3px;
+    }
+  
+    .horoscope-sign small {
+      font-size: 8px;
+    }
+  
+    .forecast-section {
+      padding-bottom: 60px;
+    }
+  
+    .forecast-topline {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    .forecast-date {
+      text-align: left;
+    }
+  
+    .forecast-tabs {
+      width: 100%;
+      gap: 5px;
+    }
+  
+    .forecast-tab {
+      flex: 1;
+      min-width: 0;
+      padding: 10px 5px;
+    }
+  
+    .forecast-main-card {
+      padding: 25px 22px;
+    }
+  
+    .forecast-moon-art {
+      position: absolute;
+      right: -45px;
+      bottom: -45px;
+      opacity: .23;
+    }
+  
+    .forecast-main-copy {
+      max-width: 100%;
+    }
+  
+    .forecast-main-copy h3 {
+      font-size: 29px;
+    }
+  
+    .forecast-insights {
+      grid-template-columns: 1fr;
+      gap: 11px;
+    }
+  
+    .forecast-insight-card {
+      min-height: auto;
+    }
+  
+    .approach-inner {
+      gap: 22px;
+    }
+  }
+  
+  @media (max-width: 380px) {
+    .horoscope-hero-inner {
+      width: calc(100% - 26px);
+    }
+  
+    .horoscope-hero-actions {
+      flex-direction: column;
+    }
+  
+    .horoscope-hero-actions .button {
+      width: 100%;
+    }
+  
+    .horoscope-sign-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  
+    .forecast-title-row h2 {
+      font-size: 28px;
+    }
+  
+    .forecast-main-card {
+      padding: 22px 17px;
+    }
+  
+    .approach-actions {
+      align-items: stretch;
+      flex-direction: column;
+    }
+  }
+  
+/* ================================
+   BIRTH CHART RESPONSIVE STYLES
+================================ */
+
+@media (max-width: 900px) {
+    .chart-hero {
+      gap: 20px;
+      padding: 65px 5%;
+    }
+  
+    .chart-orbit {
+      flex-basis: 260px;
+      width: 260px;
+      height: 260px;
+    }
+  
+    .orbit-one { width: 110px; height: 110px; }
+    .orbit-two { width: 185px; height: 185px; }
+    .orbit-three { width: 245px; height: 245px; }
+  
+    .chart-layout {
+      grid-template-columns: 1fr;
+      max-width: 690px;
+      margin: 0 auto;
+    }
+  
+    .chart-meaning-grid {
+      gap: 14px;
+    }
+  
+    .meaning-card {
+      padding: 22px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .chart-hero {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 55px 6% 65px;
+    }
+  
+    .chart-hero h1 {
+      font-size: clamp(2.35rem, 10vw, 3.2rem);
+    }
+  
+    .chart-hero-content > p {
+      font-size: 0.92rem;
+    }
+  
+    .chart-orbit {
+      align-self: center;
+      flex-basis: auto;
+      width: 240px;
+      height: 240px;
+      margin-top: 20px;
+    }
+  
+    .orbit-one { width: 100px; height: 100px; }
+    .orbit-two { width: 175px; height: 175px; }
+    .orbit-three { width: 225px; height: 225px; }
+  
+    .orbit-label {
+      bottom: -7px;
+    }
+  
+    .chart-workspace {
+      padding: 55px 0 65px;
+    }
+  
+    .chart-intro {
+      margin-bottom: 28px;
+    }
+  
+    .chart-form,
+    .chart-preview-panel {
+      padding: 21px 17px;
+      border-radius: 15px;
+    }
+  
+    .form-heading h3 {
+      font-size: 1.18rem;
+    }
+  
+    .kundli-frame {
+      padding: 18px 10px 14px;
+    }
+  
+    .preview-details {
+      gap: 9px;
+    }
+  
+    .preview-detail {
+      padding: 11px;
+    }
+  
+    .preview-detail strong {
+      font-size: 0.8rem;
+    }
+  
+    .chart-meaning-section {
+      padding: 60px 0;
+    }
+  
+    .chart-meaning-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .meaning-card {
+      padding: 24px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .orbit-three {
+      animation: none;
+    }
+  
+    .meaning-card,
+    .chart-submit span {
+      transition: none;
+    }
+  }
+  
+/* =====================================
+   COMPATIBILITY RESPONSIVE STYLES
+===================================== */
+
+@media (max-width: 900px) {
+    .compat-hero {
+      gap: 15px;
+      padding: 60px 5%;
+    }
+  
+    .compat-cosmic-art {
+      flex-basis: 260px;
+      width: 260px;
+      height: 260px;
+    }
+  
+    .ring-outer { width: 245px; height: 245px; }
+    .ring-middle { width: 190px; height: 190px; }
+    .ring-inner { width: 135px; height: 135px; }
+  
+    .person-one {
+      top: 55px;
+      left: 35px;
+    }
+  
+    .person-two {
+      right: 35px;
+      bottom: 55px;
+    }
+  
+    .compat-people-grid {
+      grid-template-columns: minmax(0, 1fr) 45px minmax(0, 1fr);
+      gap: 10px;
+    }
+  
+    .compat-person-card {
+      padding: 20px 16px;
+    }
+  
+    .compat-result-grid {
+      gap: 10px;
+    }
+  
+    .compat-insight {
+      padding: 18px 14px;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .compat-hero {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 52px 6% 60px;
+    }
+  
+    .compat-hero h1 {
+      font-size: clamp(2.35rem, 10vw, 3.2rem);
+    }
+  
+    .compat-hero-content > p {
+      font-size: 0.92rem;
+    }
+  
+    .compat-cosmic-art {
+      align-self: center;
+      flex-basis: auto;
+      width: 250px;
+      height: 250px;
+      margin-top: 20px;
+    }
+  
+    .compat-workspace {
+      padding-top: 55px;
+      padding-bottom: 65px;
+    }
+  
+    .compat-section-heading {
+      margin-bottom: 30px;
+    }
+  
+    .compat-people-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  
+    .compat-person-card {
+      padding: 23px 19px;
+    }
+  
+    .compat-plus {
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .compat-plus span {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .compat-options {
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin-top: 24px;
+    }
+  
+    .compat-result {
+      padding: 23px 17px;
+      margin-top: 35px;
+    }
+  
+    .compat-result-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .compat-insight {
+      padding: 22px;
+    }
+  
+    .compat-meaning-section {
+      padding: 58px 0;
+    }
+  
+    .compat-meaning-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .compat-meaning-card {
+      padding: 24px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .ring-outer {
+      animation: none;
+    }
+  
+    .compat-meaning-card,
+    .compat-result {
+      animation: none;
+      transition: none;
+    }
+  }
+  
+  
+/* =====================================
+   AI ASTROLOGY RESPONSIVE STYLES
+===================================== */
+
+@media (max-width: 900px) {
+    .ai-hero {
+      gap: 20px;
+      padding: 60px 5%;
+    }
+  
+    .ai-hero-art {
+      flex-basis: 250px;
+      width: 250px;
+      height: 250px;
+    }
+  
+    .ai-ring-one { width: 105px; height: 105px; }
+    .ai-ring-two { width: 180px; height: 180px; }
+    .ai-ring-three { width: 235px; height: 235px; }
+  
+    .ai-app {
+      grid-template-columns: 205px minmax(0, 1fr);
+    }
+  
+    .ai-sidebar {
+      padding: 20px 12px;
+    }
+  
+    .ai-feature-grid {
+      gap: 13px;
+    }
+  
+    .ai-feature-card {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .ai-hero {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 52px 6% 60px;
+    }
+  
+    .ai-hero h1 {
+      font-size: clamp(2.35rem, 10vw, 3.2rem);
+    }
+  
+    .ai-hero-content > p {
+      font-size: 0.92rem;
+    }
+  
+    .ai-hero-art {
+      align-self: center;
+      flex-basis: auto;
+      width: 240px;
+      height: 240px;
+      margin-top: 20px;
+    }
+  
+    .ai-workspace {
+      padding-top: 55px;
+      padding-bottom: 60px;
+    }
+  
+    .ai-app {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+  
+    .ai-sidebar {
+      padding: 17px;
+      border-right: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  
+    .ai-sidebar-brand {
+      padding-bottom: 15px;
+    }
+  
+    .ai-sidebar-content {
+      padding-top: 16px;
+    }
+  
+    .ai-sidebar-label {
+      margin-bottom: 10px;
+    }
+  
+    .ai-topic-button {
+      display: inline-flex;
+      width: auto;
+      margin: 0 5px 7px 0;
+      padding: 9px 10px;
+      font-size: 0.72rem;
+    }
+  
+    .ai-sidebar-bottom {
+      display: none;
+    }
+  
+    .ai-chat {
+      min-height: 600px;
+    }
+  
+    .ai-chat-header {
+      padding: 16px;
+    }
+  
+    .ai-messages {
+      min-height: 330px;
+      max-height: 440px;
+      padding: 20px 14px;
+    }
+  
+    .ai-message {
+      max-width: 100%;
+    }
+  
+    .ai-suggestions {
+      padding: 0 15px 15px;
+    }
+  
+    .ai-chat-form {
+      margin: 0 14px;
+    }
+  
+    .ai-chat-disclaimer {
+      margin: 11px 14px 16px;
+      line-height: 1.6;
+    }
+  
+    .ai-features-section {
+      padding: 58px 0;
+    }
+  
+    .ai-feature-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .ai-feature-card {
+      padding: 24px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .ai-ring-three {
+      animation: none;
+    }
+  
+    .ai-feature-card,
+    .ai-chat-form button {
+      transition: none;
+    }
+  }
+  
+/* ASTROLOGERS PAGE RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .astrologer-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .astro-directory-hero {
+      padding: 75px 20px 65px;
+    }
+  
+    .astro-directory {
+      padding-top: 55px;
+      padding-bottom: 60px;
+    }
+  
+    .astrologer-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .astro-filter-bar {
+      gap: 8px;
+    }
+  
+    .astro-filter {
+      padding: 9px 13px;
+      font-size: 12px;
+    }
+  
+    .astrologer-card {
+      padding: 21px;
+    }
+  
+    .astro-cta {
+      padding: 55px 20px;
+    }
+  }
+  
+/* AUTH PAGES RESPONSIVE */
+
+@media (max-width: 600px) {
+    .auth-main {
+      padding: 35px 15px;
+      min-height: auto;
+    }
+  
+    .auth-card,
+    .signup-card {
+      padding: 28px 21px;
+    }
+  
+    .auth-card h1 {
+      font-size: 29px;
+    }
+  
+    .auth-options {
+      flex-wrap: wrap;
+    }
+  }
+  

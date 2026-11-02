@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore astrology-inspired questions with the AstroVeda AI Guide.">
+  <title>AI Astrology Guide | AstroVeda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div class="announcement">
+    <p>Your cosmic questions deserve thoughtful exploration.</p>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-symbol">✧</span>
+        <span>AstroVeda</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="horoscope.html" class="nav-link">Horoscope</a>
+        <a href="birth-chart.html" class="nav-link">Birth Chart</a>
+        <a href="compatibility.html" class="nav-link">Compatibility</a>
+        <a href="astrologers.html" class="nav-link">Astrologers</a>
+        <a href="ai-astrology.html" class="nav-link active" aria-current="page">AI Guide</a>
+        <a href="login.html" class="nav-login">Log in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="ai-hero">
+      <div class="ai-hero-content">
+        <span class="eyebrow">MEET YOUR COSMIC COMPANION</span>
+        <h1>Ask the stars.<br><em>Explore your path.</em></h1>
+        <p>
+          Have questions about zodiac signs, astrology traditions,
+          relationships, or your cosmic profile? Start a conversation
+          with the AstroVeda AI Guide.
+        </p>
+        <div class="ai-hero-tags">
+          <span>✧ Vedic insights</span>
+          <span>✧ Zodiac knowledge</span>
+          <span>✧ Self-discovery</span>
+        </div>
+      </div>
+
+      <div class="ai-hero-art" aria-hidden="true">
+        <div class="ai-art-ring ai-ring-one"></div>
+        <div class="ai-art-ring ai-ring-two"></div>
+        <div class="ai-art-ring ai-ring-three"></div>
+        <div class="ai-art-core">✧</div>
+        <span class="ai-art-star ai-star-one">✦</span>
+        <span class="ai-art-star ai-star-two">✧</span>
+        <span class="ai-art-star ai-star-three">✦</span>
+        <span class="ai-art-star ai-star-four">✧</span>
+        <span class="ai-art-label">A LITTLE COSMIC CLARITY</span>
+      </div>
+    </section>
+
+    <section class="ai-workspace section-wrap">
+      <div class="ai-section-heading">
+        <span class="eyebrow">YOUR PERSONAL ASTROLOGY SPACE</span>
+        <h2>Let's explore something together</h2>
+        <p>Choose a suggested topic or type your own question below.</p>
+      </div>
+
+      <div class="ai-app">
+
+        <!-- Sidebar -->
+        <aside class="ai-sidebar">
+          <div class="ai-sidebar-brand">
+            <div class="ai-sidebar-icon">✧</div>
+            <div>
+              <h3>AstroVeda Guide</h3>
+              <span><i></i> Demo assistant</span>
+            </div>
+          </div>
+
+          <div class="ai-sidebar-content">
+            <span class="ai-sidebar-label">EXPLORE TOPICS</span>
+
+            <button class="ai-topic-button" data-question="Explain the basics of Vedic astrology.">
+              <span>☼</span> Vedic Astrology
+            </button>
+
+            <button class="ai-topic-button" data-question="What are the twelve zodiac signs and what do they represent?">
+              <span>♈</span> Zodiac Signs
+            </button>
+
+            <button class="ai-topic-button" data-question="What are the Sun, Moon and Ascendant signs?">
+              <span>☾</span> Birth Chart Basics
+            </button>
+
+            <button class="ai-topic-button" data-question="How does astrology traditionally explore relationship compatibility?">
+              <span>♡</span> Compatibility
+            </button>
+
+            <button class="ai-topic-button" data-question="What are the nine planets or Navagrahas in Vedic astrology?">
+              <span>✧</span> Navagrahas
+            </button>
+          </div>
+
+          <div class="ai-sidebar-bottom">
+            <p>Astrology is a traditional belief system, not a scientifically established predictive method.</p>
+          </div>
+        </aside>
+
+        <!-- Chat area -->
+        <section class="ai-chat">
+          <div class="ai-chat-header">
+            <div class="ai-chat-heading">
+              <div class="ai-chat-avatar">✧</div>
+              <div>
+                <h3>AstroVeda AI Guide</h3>
+                <p><span></span> Ready to explore</p>
+              </div>
+            </div>
+
+            <button type="button" id="clearChat" class="ai-clear-button" title="Clear conversation">
+              ↻ <span>New chat</span>
+            </button>
+          </div>
+
+          <div id="chatMessages" class="ai-messages" aria-live="polite">
+            <div class="ai-message ai-bot-message">
+              <div class="ai-message-avatar">✧</div>
+              <div class="ai-message-content">
+                <span class="ai-sender">ASTROVEDA GUIDE</span>
+                <div class="ai-message-bubble">
+                  <p>Namaste! Welcome to AstroVeda. ✨</p>
+                  <p>
+                    I'm here to help you explore astrology concepts,
+                    zodiac signs, birth-chart basics, and traditional
+                    interpretations.
+                  </p>
+                  <p>What would you like to discover today?</p>
+                </div>
+                <span class="ai-message-time">Your cosmic conversation begins here</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-suggestions">
+            <span>TRY ASKING</span>
+            <div class="ai-suggestion-list">
+              <button type="button" class="ai-suggestion" data-question="What is my zodiac sign?">My zodiac sign</button>
+              <button type="button" class="ai-suggestion" data-question="What is a birth chart?">Birth chart</button>
+              <button type="button" class="ai-suggestion" data-question="What is the meaning of the Moon sign?">Moon sign</button>
+            </div>
+          </div>
+
+          <form id="aiChatForm" class="ai-chat-form">
+            <label class="visually-hidden" for="aiQuestion">Ask your astrology question</label>
+            <input
+              type="text"
+              id="aiQuestion"
+              placeholder="Ask anything about astrology..."
+              maxlength="500"
+              autocomplete="off"
+              required
+            >
+            <button type="submit" aria-label="Send message">↑</button>
+          </form>
+
+          <p class="ai-chat-disclaimer">
+            Demo assistant · Responses are illustrative and not personalized predictions.
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <section class="ai-features-section">
+      <div class="section-wrap">
+        <div class="ai-section-heading">
+          <span class="eyebrow">EXPLORE WITH CURIOSITY</span>
+          <h2>What can your guide help you explore?</h2>
+        </div>
+
+        <div class="ai-feature-grid">
+          <article class="ai-feature-card">
+            <span>☼</span>
+            <h3>Astrology knowledge</h3>
+            <p>Learn about planets, houses, signs, and important concepts in Vedic and Western traditions.</p>
+          </article>
+
+          <article class="ai-feature-card">
+            <span>☾</span>
+            <h3>Birth-chart learning</h3>
+            <p>Understand the traditional meanings of the Sun, Moon, Ascendant, and planetary placements.</p>
+          </article>
+
+          <article class="ai-feature-card">
+            <span>♡</span>
+            <h3>Relationship themes</h3>
+            <p>Explore how astrology traditions discuss communication, emotional patterns, and compatibility.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-symbol">✧</span>
+          <span>AstroVeda</span>
+        </a>
+        <p>Ancient wisdom. Modern perspective. A little more clarity for your journey.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="horoscope.html">Daily Horoscope</a>
+        <a href="birth-chart.html">Birth Chart</a>
+        <a href="compatibility.html">Compatibility</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Discover</h4>
+        <a href="astrologers.html">Our Astrologers</a>
+        <a href="ai-astrology.html">AI Astrology Guide</a>
+        <a href="about.html">About AstroVeda</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Your Account</a>
+        <a href="signup.html">Create Account</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> AstroVeda. For reflection and entertainment.</p>
+      <p>Made for curious minds <span>✧</span></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="ai-astrology.js"></script>
+</body>
+</html>
+```

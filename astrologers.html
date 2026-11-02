@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Astrologers | AstroVeda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <div class="announcement">
+    <p>Discover guidance for your journey · Welcome to AstroVeda</p>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">Astro<span>Veda</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="horoscope.html" class="nav-link">Horoscope</a>
+        <a href="birth-chart.html" class="nav-link">Birth Chart</a>
+        <a href="compatibility.html" class="nav-link">Compatibility</a>
+        <a href="astrologers.html" class="nav-link active">Astrologers</a>
+        <a href="ai-astrology.html" class="nav-link">AI Guide</a>
+        <a href="login.html" class="nav-login">Log in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="astro-directory-hero">
+      <div class="astro-hero-stars">✦　✧　✦</div>
+      <p class="eyebrow">MEET YOUR GUIDES</p>
+      <h1>Find the right guide for <em>your journey.</em></h1>
+      <p class="astro-hero-description">
+        Explore astrology perspectives, understand your questions,
+        and connect with a guide whose experience matches your interests.
+      </p>
+      <a href="#astrologer-list" class="button">Explore astrologers</a>
+      <p class="astro-hero-note">Profiles and consultation fees shown here are demonstration content.</p>
+    </section>
+
+    <section class="astro-directory section-wrap" id="astrologer-list">
+      <div class="section-heading">
+        <p class="eyebrow">OUR ASTROLOGY GUIDES</p>
+        <h2>Meet our astrologers</h2>
+        <p>Choose a specialty to explore the available profiles.</p>
+      </div>
+
+      <div class="astro-filter-bar" aria-label="Filter astrologers by specialty">
+        <button class="astro-filter active" data-filter="all">All guides</button>
+        <button class="astro-filter" data-filter="vedic">Vedic astrology</button>
+        <button class="astro-filter" data-filter="career">Career</button>
+        <button class="astro-filter" data-filter="relationship">Relationships</button>
+        <button class="astro-filter" data-filter="numerology">Numerology</button>
+      </div>
+
+      <div class="astrologer-grid" id="astrologerGrid">
+
+        <article class="astrologer-card" data-specialties="vedic career">
+          <div class="astrologer-card-top">
+            <div class="astrologer-avatar avatar-one">AD</div>
+            <span class="astro-availability">Available for booking</span>
+          </div>
+          <h3>Acharya Dev</h3>
+          <p class="astro-role">Vedic Astrology Consultant</p>
+          <div class="astro-rating">★ 4.9 <span>(120 reviews)</span></div>
+          <p class="astro-bio">Focuses on traditional Vedic astrology, birth-chart interpretation and career-related questions.</p>
+          <div class="astro-tags">
+            <span>Vedic astrology</span><span>Career</span>
+          </div>
+          <div class="astro-card-meta">
+            <div><small>Experience</small><strong>12 years</strong></div>
+            <div><small>Consultation</small><strong>₹799 / session</strong></div>
+          </div>
+          <a class="button astro-book-button" href="booking.html?astrologer=Acharya%20Dev">Book consultation</a>
+        </article>
+
+        <article class="astrologer-card" data-specialties="relationship vedic">
+          <div class="astrologer-card-top">
+            <div class="astrologer-avatar avatar-two">MS</div>
+            <span class="astro-availability">Available for booking</span>
+          </div>
+          <h3>Meera Sharma</h3>
+          <p class="astro-role">Relationship Astrology Guide</p>
+          <div class="astro-rating">★ 4.8 <span>(96 reviews)</span></div>
+          <p class="astro-bio">Explores relationship themes, compatibility and traditional chart interpretations.</p>
+          <div class="astro-tags">
+            <span>Relationships</span><span>Compatibility</span>
+          </div>
+          <div class="astro-card-meta">
+            <div><small>Experience</small><strong>9 years</strong></div>
+            <div><small>Consultation</small><strong>₹699 / session</strong></div>
+          </div>
+          <a class="button astro-book-button" href="booking.html?astrologer=Meera%20Sharma">Book consultation</a>
+        </article>
+
+        <article class="astrologer-card" data-specialties="career numerology">
+          <div class="astrologer-card-top">
+            <div class="astrologer-avatar avatar-three">RK</div>
+            <span class="astro-availability">Available for booking</span>
+          </div>
+          <h3>Rishi Kapoor</h3>
+          <p class="astro-role">Numerology & Career Guide</p>
+          <div class="astro-rating">★ 4.9 <span>(84 reviews)</span></div>
+          <p class="astro-bio">Discusses numerology concepts, personal goals and career-planning questions.</p>
+          <div class="astro-tags">
+            <span>Numerology</span><span>Career</span>
+          </div>
+          <div class="astro-card-meta">
+            <div><small>Experience</small><strong>8 years</strong></div>
+            <div><small>Consultation</small><strong>₹599 / session</strong></div>
+          </div>
+          <a class="button astro-book-button" href="booking.html?astrologer=Rishi%20Kapoor">Book consultation</a>
+        </article>
+
+        <article class="astrologer-card" data-specialties="vedic numerology">
+          <div class="astrologer-card-top">
+            <div class="astrologer-avatar avatar-four">SP</div>
+            <span class="astro-availability">Available for booking</span>
+          </div>
+          <h3>Suman Pandey</h3>
+          <p class="astro-role">Vedic Astrology & Numerology</p>
+          <div class="astro-rating">★ 4.7 <span>(73 reviews)</span></div>
+          <p class="astro-bio">Offers educational guidance on Vedic astrology, planetary symbolism and numerology.</p>
+          <div class="astro-tags">
+            <span>Vedic astrology</span><span>Numerology</span>
+          </div>
+          <div class="astro-card-meta">
+            <div><small>Experience</small><strong>7 years</strong></div>
+            <div><small>Consultation</small><strong>₹649 / session</strong></div>
+          </div>
+          <a class="button astro-book-button" href="booking.html?astrologer=Suman%20Pandey">Book consultation</a>
+        </article>
+
+        <article class="astrologer-card" data-specialties="relationship career">
+          <div class="astrologer-card-top">
+            <div class="astrologer-avatar avatar-five">AK</div>
+            <span class="astro-availability">Available for booking</span>
+          </div>
+          <h3>Ananya Khanna</h3>
+          <p class="astro-role">Personal Growth Guide</p>
+          <div class="astro-rating">★ 4.8 <span>(68 reviews)</span></div>
+          <p class="astro-bio">Combines modern astrology themes with reflective conversations about relationships and goals.</p>
+          <div class="astro-tags">
+            <span>Relationships</span><span>Career</span>
+          </div>
+          <div class="astro-card-meta">
+            <div><small>Experience</small><strong>6 years</strong></div>
+            <div><small>Consultation</small><strong>₹549 / session</strong></div>
+          </div>
+          <a class="button astro-book-button" href="booking.html?astrologer=Ananya%20Khanna">Book consultation</a>
+        </article>
+
+        <article class="astrologer-card" data-specialties="vedic career">
+          <div class="astrologer-card-top">
+            <div class="astrologer-avatar avatar-six">VS</div>
+            <span class="astro-availability">Available for booking</span>
+          </div>
+          <h3>Vikram Singh</h3>
+          <p class="astro-role">Kundli Interpretation Guide</p>
+          <div class="astro-rating">★ 4.7 <span>(52 reviews)</span></div>
+          <p class="astro-bio">Specializes in explaining birth-chart basics, houses, signs and planetary placements.</p>
+          <div class="astro-tags">
+            <span>Vedic astrology</span><span>Career</span>
+          </div>
+          <div class="astro-card-meta">
+            <div><small>Experience</small><strong>10 years</strong></div>
+            <div><small>Consultation</small><strong>₹749 / session</strong></div>
+          </div>
+          <a class="button astro-book-button" href="booking.html?astrologer=Vikram%20Singh">Book consultation</a>
+        </article>
+
+      </div>
+
+      <p class="astro-no-results" id="astroNoResults" hidden>
+        No profiles match this specialty yet. Please select another filter.
+      </p>
+    </section>
+
+    <section class="astro-cta">
+      <p class="eyebrow">YOUR NEXT STEP</p>
+      <h2>Not sure where to begin?</h2>
+      <p>Start with the AstroVeda AI Guide to explore astrology topics before choosing a consultation.</p>
+      <a href="ai-astrology.html" class="button">Explore AI Astrology Guide</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-column">
+        <a href="index.html" class="brand">Astro<span>Veda</span></a>
+        <p>Explore the wisdom of astrology with a thoughtful blend of tradition and modern perspectives.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="horoscope.html">Horoscope</a>
+        <a href="birth-chart.html">Birth Chart</a>
+        <a href="compatibility.html">Compatibility</a>
+      </div>
+      <div class="footer-column">
+        <h4>Discover</h4>
+        <a href="astrologers.html">Astrologers</a>
+        <a href="ai-astrology.html">AI Guide</a>
+        <a href="about.html">About us</a>
+      </div>
+      <div class="footer-column">
+        <h4>Account</h4>
+        <a href="login.html">Log in</a>
+        <a href="signup.html">Create account</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> AstroVeda. For educational and reflective purposes.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="astrologers.js"></script>
+</body>
+</html>
